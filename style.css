@@ -1,0 +1,157 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Poppins", sans-serif; background: #0f172a; color: white; overflow-x: hidden; }
+
+/* Navbar */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 50px; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+  position: fixed; width: 100%; z-index: 1000;
+}
+.logo-container { display: flex; align-items: center; }
+.logo-img { width: 45px; height: 45px; margin-right: 10px; border-radius: 50%; }
+.logo-text { font-size: 22px; font-weight: bold; color: #38bdf8; }
+header ul { list-style: none; display: flex; }
+header ul li { margin: 0 15px; }
+header ul li a { color: white; text-decoration: none; transition: 0.3s; font-weight: 500; }
+header ul li a:hover { color: #38bdf8; }
+
+/* Hero */
+.hero {
+  height: 100vh; display: flex; justify-content: center; align-items: center;
+  position: relative; text-align: center; overflow: hidden;
+}
+#particles {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+}
+.hero-content {
+  z-index: 1;
+  margin-top: 100px; /* Added to move content down */
+}
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero-content p {
+  margin-bottom: 40px;
+}
+.glow { text-shadow: 0 0 15px #38bdf8, 0 0 30px #0ea5e9; }
+.btn {
+  padding: 12px 30px; background: linear-gradient(90deg,#38bdf8,#0ea5e9);
+  color: white; border-radius: 25px; text-decoration: none;
+  font-weight: bold; transition: 0.3s; box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+.btn:hover { background: linear-gradient(90deg,#0ea5e9,#38bdf8); }
+
+/* Sections */
+section { padding: 80px 20px; text-align: center; }
+.about, .contact { background: rgba(255,255,255,0.05); border-radius: 15px; margin: 40px auto; width: 80%; padding: 40px; }
+
+/* Services */
+.services .cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; margin-top: 40px;
+}
+.card {
+  background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(56,189,248,0.6);
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.6); padding: 20px; text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(15,23,42,0.95);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s;
+}
+
+/* Modal content */
+.modal-content {
+  background: rgba(255,255,255,0.05);
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: zoomIn 0.5s;
+}
+
+/* Close button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #38bdf8;
+}
+
+/* Apps showcase */
+.apps-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.app-item {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-item .btn {
+  margin-top: 15px; /* Push Play Store button down to avoid overlap with logo */
+}
+
+.app-item:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 15px 30px rgba(56,189,248,0.6);
+}
+
+.app-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.app-item h3 {
+  margin-bottom: 20px; /* Space between app name and Play Store button */
+  font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@keyframes zoomIn {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}

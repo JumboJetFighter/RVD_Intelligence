@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVD Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="RVD Logo" class="logo-img">
+      <span class="logo-text">RVD Intelligence</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#" id="about-link">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <h1 class="glow">We Build the Future</h1>
+      <p>Innovating Apps & Web Solutions with Intelligence</p>
+      <a href="#services" class="btn">Explore More</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <!-- App Development Card -->
+      <div class="card tilt" id="appCard">
+        <h3>App Development</h3>
+        <p>Modern Android & iOS apps.</p>
+      </div>
+
+      <div class="card tilt">
+        <h3>Web Development</h3>
+        <p>Responsive, fast, and dynamic websites.</p>
+      </div>
+      <div class="card tilt">
+        <h3>Data Solutions</h3>
+        <p>Advanced data collection & analytics.</p>
+      </div>
+      <div class="card tilt">
+        <h3>IT Consulting</h3>
+        <p>Tech-driven business strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Modal Popup -->
+  <div id="appModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Our Apps</h2>
+      <div class="apps-showcase">
+        <!-- Example App 1 -->
+        <div class="app-item">
+          <img src="app1.png" alt="App 1 Screenshot">
+          <h3>IELTS Daily Challenges</h3>
+          <a href="https://play.google.com/store/apps/details?id=com.example.app1" target="_blank" class="btn">Play Store</a>
+        </div>
+        <!-- Example App 2 -->
+        <div class="app-item">
+          <img src="app2.png" alt="App 2 Screenshot">
+          <h3>Walk & Earn</h3>
+          <a href="https://play.google.com/store/apps/details?id=com.example.app2" target="_blank" class="btn">Play Store</a>
+
+        </div>
+        <!-- Add more apps similarly -->
+      </div>
+    </div>
+  </div>
+
+  <!-- About Modal Popup -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>About Us</h2>
+      <p>
+        RVD Intelligence builds smart applications,
+        scalable web solutions and provides consulting to empower digital businesses.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: your-email@example.com</p>
+    <p>Address: Robertsganj Sonbhadra UP</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 RVD Intelligence | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
